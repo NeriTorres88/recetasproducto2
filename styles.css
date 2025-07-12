@@ -183,3 +183,70 @@ footer {
   margin-top: 60px;
   font-size: 0.9rem;
 }
+
+/* ---------- PÁGINAS DE FORMULARIO (login | registro) ---------- */
+.form-page {
+  background: var(--gris-suave);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--azul-primario);
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 600;
+  color: var(--azul-primario);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c9d6e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.25s;
+}
+
+.form-container input:focus {
+  border-color: var(--azul-secundario);
+}
+
+.form-container .button {
+  width: 100%;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.form-container p {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form-container a {
+  color: var(--azul-primario);
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
