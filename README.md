@@ -65,10 +65,9 @@ recetas/
 
 ---
 
-## 🙋 Autora
+## 🙋 Autor
 
-**Neri Torres**  
-💌 [neritorres88@github](https://github.com/NeriTorres88)
+**Neri Torres**  [neritorres88@github](https://github.com/NeriTorres88)
 
 ---
 
