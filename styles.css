@@ -1,107 +1,185 @@
-/* --- RESET BÁSICO --- */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ---------------------------  RESET  --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:'Segoe UI',sans-serif;
-  background:#fffaf0;
-  color:#333;
+:root {
+  --azul-primario: #0077c8;
+  --azul-secundario: #0095ff;
+  --azul-claro: #e6f3ff;
+  --texto-principal: #1d1d1d;
+  --gris-suave: #f6f9fc;
 }
 
-/* --- NAVBAR --- */
-.navbar{
-  background:#ff7f50;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 4px 6px rgba(0,0,0,.1);
-}
-.logo{
-  color:#fff;
-  font-size:1.8rem;
-  font-weight:700;
-}
-.nav-links{
-  list-style:none;
-  display:flex;
-  gap:20px;
-}
-.nav-links a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-  transition:opacity .3s;
-}
-.nav-links a:hover{opacity:.8}
-
-/* --- CONTENEDOR GLOBAL --- */
-.container{
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--gris-suave);
+  color: var(--texto-principal);
+  line-height: 1.6;
 }
 
-/* --- HERO --- */
-.hero{
-  text-align:center;
-  margin-bottom:40px;
+/* ---------------------------  NAVBAR  --------------------------- */
+.navbar {
+  background: var(--azul-primario);
+  color: #fff;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
-.hero h1{color:#ff7f50;margin-bottom:10px;}
-
-/* --- GRID DE RECETAS --- */
-.recipe-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  margin-top:25px;
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
 }
-
-/* --- TARJETA DE RECETA --- */
-.recipe-card{
-  background:#fff;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
-  transition:transform .3s,box-shadow .3s;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
-.recipe-card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.25s;
 }
-.recipe-card h3{
-  padding:15px;
-  color:#ff7f50;
+.nav-links a:hover {
+  opacity: 0.8;
 }
-.recipe-card p{
-  padding:0 15px 20px;
-  font-size:.9em;
+/* Buscador */
+.buscador {
+  display: flex;
+  gap: 6px;
 }
-.recipe-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 6px 16px rgba(0,0,0,.12);
+.buscador input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
 }
-
-/* --- ANIMACIONES --- */
-.animate-fade{animation:fadeIn 1s ease;}
-.animate-pop{animation:popIn .8s ease;}
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
+.buscador button {
+  background: var(--azul-secundario);
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
-@keyframes popIn{
-  0%{transform:scale(.6);opacity:0;}
-  100%{transform:scale(1);opacity:1;}
+.buscador button:hover {
+  background: #0084e6;
 }
 
-/* --- SEPARADORES DE SECCIÓN --- */
-section h2{
-  margin-top:50px;
-  text-align:center;
-  color:#ff7f50;
-  font-size:1.6rem;
+/* ----------------------  CONTENEDOR GLOBAL  --------------------- */
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* ---------------------------  HERO  --------------------------- */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hero h1 {
+  color: var(--azul-primario);
+  margin-bottom: 10px;
+}
+
+/* ----------------------  SEPARADORES  ---------------------- */
+section h2 {
+  text-align: center;
+  color: var(--azul-primario);
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* ---------------------  GRID DE RECETAS  -------------------- */
+.recipe-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.recipe-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.recipe-card h3 {
+  color: var(--azul-primario);
+  padding: 14px 16px 6px;
+}
+.recipe-card p {
+  padding: 0 16px 20px;
+  font-size: 0.9em;
+}
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------------  DETALLE RECETA  -------------------- */
+.detalle-receta .detalle-img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.ingredientes ul {
+  list-style: square inside;
+  margin-left: 20px;
+  padding: 10px 0 20px;
+}
+.preparacion ol {
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+/* ---------- BOTONES ---------- */
+.button {
+  background: var(--azul-primario);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.button:hover {
+  background: #005fa3;
+}
+.volver {
+  margin-top: 10px;
+}
+
+/* ---------------- ANIMACIONES (fade & pop) ---------------- */
+.animate-fade { animation: fadeIn 0.9s ease forwards; }
+.animate-pop  { animation: popIn 0.6s ease forwards; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes popIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* ---------------------------  FOOTER  --------------------------- */
+footer {
+  background: var(--azul-claro);
+  text-align: center;
+  padding: 18px;
+  margin-top: 60px;
+  font-size: 0.9rem;
 }

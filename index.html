@@ -1,91 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recetas Deliciosas</title>
-
-  <!-- CSS del proyecto -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Iconos Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas Azules</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Barra de navegación -->
   <header>
     <nav class="navbar">
-      <div class="logo"><i class="fa-solid fa-utensils"></i> Recetas Deliciosas</div>
+      <div class="logo"><i class="fa-solid fa-bowl-food"></i> Recetas Azules</div>
       <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="#entradas">Entradas</a></li>
         <li><a href="#platos-fuertes">Platos fuertes</a></li>
         <li><a href="#postres">Postres</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="registro.html">Registro</a></li>
       </ul>
+      <form class="buscador">
+        <input type="text" placeholder="Buscar receta...">
+        <button><i class="fa fa-search"></i></button>
+      </form>
     </nav>
   </header>
 
   <main class="container">
     <!-- Hero -->
     <section class="hero animate-fade">
-      <h1><i class="fa-solid fa-bowl-food"></i> Tu recetario favorito</h1>
-      <p>Encuentra recetas fáciles y deliciosas para cada ocasión.</p>
+      <h1><i class="fa-solid fa-utensils"></i> Bienvenido a Recetas Azules</h1>
+      <p>Recetas frescas, sabrosas y fáciles para toda ocasión.</p>
     </section>
 
     <!-- Entradas -->
     <section id="entradas">
-      <h2>Entradas <i class="fa-solid fa-leaf"></i></h2>
+      <h2>Entradas</h2>
       <div class="recipe-grid">
         <article class="recipe-card animate-pop">
-          <img src="img/bruschetta.jpg" alt="Bruschetta" />
-          <h3>Bruschetta clásica</h3>
-          <p>Pan tostado con tomate, albahaca y aceite de oliva.</p>
+          <a href="detalle.html?receta=bruschetta">
+            <img src="img/bruschetta.jpg" alt="Bruschetta">
+            <h3>Bruschetta</h3>
+            <p>Pan tostado con tomate y albahaca.</p>
+          </a>
         </article>
         <article class="recipe-card animate-pop">
-          <img src="img/guacamole.jpg" alt="Guacamole" />
-          <h3>Guacamole fresco</h3>
-          <p>Aguacate, tomate, cebolla y cilantro.</p>
+          <a href="detalle.html?receta=guacamole">
+            <img src="img/guacamole.jpg" alt="Guacamole">
+            <h3>Guacamole</h3>
+            <p>Aguacate con toque mexicano.</p>
+          </a>
         </article>
       </div>
     </section>
 
     <!-- Platos fuertes -->
     <section id="platos-fuertes">
-      <h2>Platos fuertes <i class="fa-solid fa-drumstick-bite"></i></h2>
+      <h2>Platos Fuertes</h2>
       <div class="recipe-grid">
         <article class="recipe-card animate-pop">
-          <img src="img/lasagna.jpg" alt="Lasagna" />
-          <h3>Lasagna italiana</h3>
-          <p>Capa sobre capa de pasta, carne y queso.</p>
+          <a href="detalle.html?receta=lasagna">
+            <img src="img/lasagna.jpg" alt="Lasagna">
+            <h3>Lasagna</h3>
+            <p>Tradicional receta italiana.</p>
+          </a>
         </article>
         <article class="recipe-card animate-pop">
-          <img src="img/paella.jpg" alt="Paella" />
-          <h3>Paella valenciana</h3>
-          <p>Arroz, mariscos y azafrán.</p>
+          <a href="detalle.html?receta=paella">
+            <img src="img/paella.jpg" alt="Paella">
+            <h3>Paella</h3>
+            <p>Receta clásica española.</p>
+          </a>
         </article>
       </div>
     </section>
 
     <!-- Postres -->
     <section id="postres">
-      <h2>Postres <i class="fa-solid fa-ice-cream"></i></h2>
+      <h2>Postres</h2>
       <div class="recipe-grid">
         <article class="recipe-card animate-pop">
-          <img src="img/cheesecake.jpg" alt="Cheesecake" />
-          <h3>Cheesecake de fresa</h3>
-          <p>Suave, cremoso y con coulis de fresa.</p>
+          <a href="detalle.html?receta=cheesecake">
+            <img src="img/cheesecake.jpg" alt="Cheesecake">
+            <h3>Cheesecake</h3>
+            <p>Con fresa y base de galleta.</p>
+          </a>
         </article>
         <article class="recipe-card animate-pop">
-          <img src="img/brownies.jpg" alt="Brownies" />
-          <h3>Brownies chocolatosos</h3>
-          <p>Chocolate intenso y textura fudgy.</p>
+          <a href="detalle.html?receta=brownies">
+            <img src="img/brownies.jpg" alt="Brownies">
+            <h3>Brownies</h3>
+            <p>Fudgy con mucho chocolate.</p>
+          </a>
         </article>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Recetas Deliciosas. ¡Cocina con pasión! <i class="fa-solid fa-heart"></i></p>
+    <p>&copy; 2025 Recetas Azules. Creado con <i class="fa-solid fa-heart"></i></p>
   </footer>
 </body>
 </html>
